@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1D263B; /* Warna latar belakang dalam mode gelap */
+    color: #FFFFFF; /* Warna teks dalam mode gelap */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi saat perubahan mode */
+}
+
+/* Mengatur tampilan tombol dan ikon */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit; /* Warna ikon mengikuti warna teks */
+    transition: color 0.3s;
+}
+
+#dark-mode-toggle:focus {
+    outline: none;
+}
+
+#dark-mode-toggle:hover {
+    color: #8cd0f0; /* Warna ikon saat dihover */
+}
+
+/* Mengatur tampilan ikon untuk mode terang */
+body:not(.dark-mode) #dark-mode-toggle .fa-sun {
+    display: none;
+}
+
+/* Mengatur tampilan ikon untuk mode gelap */
+body.dark-mode #dark-mode-toggle .fa-moon {
+    display: none;
+}
+
+/* Mengatur tampilan ikon saat diklik */
+body.dark-mode #dark-mode-toggle.clicked .fa-sun {
+    display: inline;
+}
+
+body:not(.dark-mode) #dark-mode-toggle.clicked .fa-moon {
+    display: inline;
+}
+
+
+.dark-mode {
+    background-color: #ffffff; /* Warna latar belakang dalam mode terang */
+    color: #000000; /* Warna teks dalam mode terang menjadi hitam */
+}
+
+h1, h2, h3 {
+    font-family: 'Fira Mono', monospace;
+    color: inherit; /* Warna teks mengikuti mode */
+}
+
+h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
+h3 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+a, span {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit; /* Warna teks mengikuti mode */
+}
+
+.green {
+    color: #7EB77F;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.pink {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: #8cd0f0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.social-link a i {
+    transition: all 0.2s ease;
+}
+
+.social-link a i:hover {
+    color: #8cd0f0;
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 0 25px;
+    text-align: center;
+    max-width: 1600px;
+}
+
+section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-top: 8vh;
+}
+
+section .hyperlink {
+    color: #8cd0f0;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+}
+
+section .hyperlink:hover {
+    color: #7EB77F;
+}
+
+.section-description {
+    margin: 10px auto 0 auto;
+    text-align: center;
+    max-width: 1000px;
+    line-height: 1.5em;
+    letter-spacing: 0.025em;
+}
+
+.page-title {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page-title img {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1D263B; /* Warna latar belakang dalam mode gelap */
+        color: #FFFFFF; /* Warna teks dalam mode gelap */
+    }
+}
+
+/* text style */
+.typing-text {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.09em solid #ffffff;
+}
